@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>响应式布局作业</title>
+    <style type="text/css">
+        *，
+        ：after,
+        :before{
+            box-sizing: border-box;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex: 1 1 auto;
+        }
+        .left{
+            height: 1000px;
+            background: darkcyan;
+            flex: 0 0 200px;
+            order:-1;
+        }
+        .content{
+            background:lightsteelblue;
+            height:1000px;
+            flex:1 1 auto;
+        }
+        .right{
+            flex: 0 0 220px;
+            height: 1000px;
+            background: #55D4EB;
+            display: flex;
+            flex-direction: column;
+        }
+        .item{
+            width: 100px;
+            height: 180px;
+            padding: 5px 5px 5px 5px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #EEE;
+            text-align: center;
+        }
+
+
+        [class*='col-']{
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex:1;
+            flex: 1;
+            border:.2em solid #EEE;
+            box-sizing: border-box;
+            background: #B0C4DE;
+            min-height: 100px;
+            height: 22rem;
+        }
+
+        .col-1{
+            flex:0 0 8.33%;
+        }
+
+        .col-2{
+            flex:0 0 16.66%;
+        }
+        .col-3{
+            flex:0 0 25%;
+        }
+        .col-4{
+            flex:0 0 33.33%;
+        }
+        .col-6{
+            flex:0 0 50%;
+        }
+        .col-12{
+            flex:0 0 100%;
+        }
+        .container{
+            width: 80%;
+            margin: 0 auto;
+        }
+        header{
+            height: 55px;
+            border-bottom: 1px solid #EEEEEE;
+        }
+        header img{
+            height: 100%;
+        }
+        .banner{
+            height: 100px;
+            margin-top: 30px;
+        }
+        .banner img{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+        .author{
+            color: #000;
+            font-size: 20px;
+            position: relative;
+            top:-65%;
+            float: right;
+            right: 30px;
+        }
+        .wrap{
+            margin-top: 40px;
+        }
+        .card{
+            height: 320px;
+            background: aqua;
+            border:1px solid #EEE;
+            border-radius: 5px;
+            text-align: center;
+            margin-right: 20px;
+        }
+        .line{
+            width:80%;
+            border:1px solid #e6e6e6;
+
+        }
+        @media only screen and (min-width : 320px) {
+            .col-xs-12{
+                flex: 0 0 100%;
+            }
+        }
+
+        @media only screen and (min-width : 768px) {
+            .col-md-6{
+                flex:0 0 50%;
+            }
+        }
+
+        @media only screen and (min-width : 992px) {
+            .col-lg-4{
+                flex: 0 0 33.33%;
+            }
+        }
+
+        @media only screen and (min-width : 1200px) {
+            .col-xl-3{
+                flex: 0 0 25%;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+<header>
+    <img src="logo.jpg">
+
+</header>
+<div class="main">
+<div class="left">
+    <div class="item">
+        <img src="dao.jpg">
+        <span>
+             最新武器</span>
+    </div>
+    <div class="item">
+        <img src="dajian.jpg">
+        <span>
+             最新武器</span>
+    </div>
+
+    <div class="item">
+        <img src="dao.jpg">
+        <span>
+             最新武器</span>
+    </div>
+    <div class="item">
+    <img src="shizijia.jpg">
+    <span>
+             最新武器</span>
+    </div>
+    <div class="item">
+        <img src="dao.jpg">
+        <span>
+             最新武器</span>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container">
+        <div class="col-12 banner">
+           <img src="1111.jpg"/>
+            <span class="author" >如何兼顾游戏和学习</span>
+        </div>
+
+                    <div class="row wrap">
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="xier.jpg" class="avatar"/>
+                                <div class="card-body">
+                                    <h3>
+                                        女武神希尔
+                                    </h3>
+                                    <p class="description">如何兼顾游戏和学习</p>
+                                    <button type="button" class="btn">了解更多</button>
+                                    <hr class="line"/>
+                                    <p class="description">
+                                        崩坏三人物模型精美原画技术高超
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="xier.jpg" class="avatar"/>
+                                <div class="card-body">
+                                    <h3>
+                                        女武神希尔
+                                    </h3>
+                                    <p class="description">擅长使用镰刀</p>
+                                    <button type="button" class="btn">了解更多</button>
+                                    <hr class="line"/>
+                                    <p class="description">
+                                        崩坏三人物模型精美原画技术高超
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="xier.jpg" class="avatar"/>
+                                <div class="card-body">
+                                    <h3>
+                                        女武神希尔
+                                    </h3>
+                                    <p class="description">如何兼顾游戏和学习</p>
+                                    <button type="button" class="btn">了解更多</button>
+                                    <hr class="line"/>
+                                    <p class="description">
+                                        崩坏三人物模型精美原画技术高超
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        <div class="row wrap">
+                    <div class="col-6">
+                        <div class="card">
+                            <img src="buluoniya.jpg" class="avatar"/>
+                            <div class="card-body">
+                                <h3>女武神布洛尼亚</h3>
+                                <p class="description">擅长使用大炮</p>
+                                <button type="button" class="btn">了解更多</button>
+                                <hr class="line"/>
+                                <p class="description">
+                                    崩坏三人物模型精美原画技术高超
+                                    崩坏三人物模型精美原画技术高超
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="col-6">
+                            <div class="card">
+                                <img src="jizi.jpg" class="avatar"/>
+                                <div class="card-body">
+                                    <h3>女武神姬子</h3>
+                                    <p class="description">擅长使用大剑</p>
+                                    <button type="button" class="btn">了解更多</button>
+                                    <hr class="line"/>
+                                    <p class="description">
+                                        崩坏三人物模型精美原画技术高超
+                                        崩坏三人物模型精美原画技术高超
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+            </div>
+            </div>
+
+<div class="right">
+    <div class="item">
+       <img src="kalian.jpg">
+        <span>
+             最新角色</span>
+    </div>
+    <div class="item">
+        <img src="delisha.jpg">
+        <span>
+             最新角色</span>
+    </div>
+    <div class="item">
+        <img src="lilv.jpg">
+        <span>
+             最新角色</span>
+    </div>
+    <div class="item">
+        <img src="lilv.jpg">
+        <span>
+             最新角色</span>
+    </div>
+    <div class="item">
+        <img src="lilv.jpg">
+        <span>
+             最新角色</span>
+    </div>
+</div>
+</div>
+</div>
+    <footer></footer>
+</body>
+</html>
